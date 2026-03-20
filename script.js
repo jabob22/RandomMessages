@@ -15,6 +15,7 @@ message += `Did you know that ${planet.name} is a planet in our solar system? He
 for (let i = 0; i < 3; i++) {
     let factPick = Math.floor(Math.random() * planet.facts.length);
     message += `- ${planet.facts[factPick]}\n`; 
+    planet.facts.splice(factPick, 1); // Remove the fact to avoid duplicates
 }
 
 
